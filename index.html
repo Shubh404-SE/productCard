@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
+
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: hsl(30, 38%, 92%);
+      font-family: Montserrat;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 10px;
+      width: 100vh;
+    }
+
+
+    .img-item img{
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 0;
+    }
+
+
+    .img-item img:hover {
+      cursor: pointer;
+      transform: scale(1.05, 1.05);
+      box-shadow: 0px, 18px, 10px, -8px black;
+    }
+
+    .contant {
+      border-radius: 10px;
+      margin: 5px;
+      text-align: left;
+    }
+
+    .contant h1 {
+      color: hsl(212, 21%, 14%);
+    }
+
+    .pera {
+      color: hsl(228, 12%, 48%);
+      font-size: 1rem;
+    }
+
+    .amount {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .amount h1 {
+      color: hsl(158, 36%, 37%);
+    }
+
+    .amount s {
+      margin: auto;
+      color: hsl(228, 12%, 48%);
+
+    }
+
+    button {
+      width: 90%;
+      height: 10%;
+      background-color: hsl(158, 36%, 37%);
+      color: white;
+      font-size: 1.5rem;
+      border: 2px solid hsl(158, 36%, 37%);
+      border-radius: 10px;
+      font-weight: 500;
+      text-align: center;
+      margin: auto auto;
+    }
+
+    button:hover {
+      cursor: pointer;
+
+    }
+
+
+
+    @media (max-width: 650px) {
+      .box {
+        width: 50vh;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <picture class="img-item">
+      <source media="(min-width: 650px)" srcset="./images/image-product-desktop.jpg">
+      <img src="./images/image-product-mobile.jpg" alt="IfItDoesntMatchAnyMedia">
+    </picture>
+
+    <div class="contant">
+      <h1 class="head">Gabrielle Essence Eau De Parfum</h1>
+      <p class="pera">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="amount">
+        <h1>$149.99</h1><s>$169.99</s>
+      </div>
+
+      <button>Add to Cart</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
